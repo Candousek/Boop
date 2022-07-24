@@ -3,13 +3,10 @@ const { GClient, Plugins, Command, Component } = require('gcommands');
 const { Intents } = require('discord.js');
 const { join } = require('path');
 
-// Set the default cooldown for commands
-Command.setDefaults({
-	cooldown: '3s',
-});
+const PermissionsInhibitor = require("./inhibitors/basePermissions");
 
-// Set the default onError function for components
 Component.setDefaults({
+	inhibitors: [ new PermissionsInhibitor() ],
 	onError: (ctx, error) => {
 		return ctx.reply('Oops! Something went wrong')
 	} 

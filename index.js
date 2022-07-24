@@ -3,10 +3,7 @@ const { GClient, Plugins, Command, Component } = require('gcommands');
 const { Intents } = require('discord.js');
 const { join } = require('path');
 
-const PermissionsInhibitor = require("./inhibitors/basePermissions");
-
 Component.setDefaults({
-	inhibitors: [ new PermissionsInhibitor() ],
 	onError: (ctx, error) => {
 		return ctx.reply('Oops! Something went wrong')
 	} 

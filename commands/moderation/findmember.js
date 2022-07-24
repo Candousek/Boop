@@ -5,7 +5,7 @@ const { MessageEmbed } = require('discord.js');
 new Command({
 	name: 'findmember',
 	description: 'Finds guild member by nickname.',
-    permissions: "MANAGE_GUILD",
+    defaultMemberPermissions: "MANAGE_GUILD",
 	type: [ CommandType.SLASH ],
     arguments: [
         {

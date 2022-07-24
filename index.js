@@ -26,7 +26,7 @@ const client = new GClient({
 	messageSupport: true,
 	messagePrefix: '!',
 	devGuildId: process.env.DEV_SERVER,
-	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+	intents: Object.keys(Intents.FLAGS),
 });
 
 // Login to the discord API

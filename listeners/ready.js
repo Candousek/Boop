@@ -9,8 +9,8 @@ new Listener({
             await guild.members.fetch();
             await guild.roles.fetch();
             console.log(`Fetched members and roles from ${guild.name}`)
-        })
+        });
 
-
+        client.modules.db.initialize();
     },
 });

@@ -23,5 +23,8 @@ const client = new GClient({
 	intents: Object.keys(Intents.FLAGS),
 });
 
+client.configs = require("./configs/exporter");
+client.modules = require("./modules/exporter");
+
 // Login to the discord API
 client.login(process.env.TOKEN);

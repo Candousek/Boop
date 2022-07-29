@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "discord.js": "^13.9.1",
     "dotenv": "^16.0.1",
     "gcommands": "^9.2.0",
+    "mysql": "^2.18.1",
     "path": "^0.12.7"
   }
 }

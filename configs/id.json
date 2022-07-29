@@ -1,0 +1,15 @@
+{
+    "guild_id": "752612960106577921",
+    "channels": {
+        "logs": "952233835087659018"
+    },
+    "logs_webhook_url": "https://ptb.discord.com/api/webhooks/1001938694296576050/eUgm-2dtjFYZC9JAf66JnmZhhUkzllBjZMlJo_mPOTpSrOuv9CaSRJ4aTSta94kcugwD",
+    "auto_channel": {
+        "category": "946442426363543572",
+        "create_channels": ["951516493437354055"]
+    },
+    "captcha": {
+        "role": "980509760094867506"
+    },
+    "auto_delete_messages_channels": [ "1001928717804777533" ]
+}

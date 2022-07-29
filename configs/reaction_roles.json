@@ -1,0 +1,28 @@
+{
+    "pings": {
+        "type": "multi",
+        "name": "Ping roles",
+        "icon": "🔔",
+        "description": "Select where you want to be pinged",
+        "roles": [
+            {
+                "id": "980509728604049469",
+                "name": "5",
+                "icon": "📝",
+                "description": "Notifies you when there is a new update."
+            },
+            {
+                "id": "980509753161707620",
+                "name": "15",
+                "icon": "😺",
+                "description": "Notifies you when we want to."
+            },
+            {
+                "id": "980509760094867506",
+                "name": "30",
+                "icon": "🤝",
+                "description": "Notifies you idk when."
+            }
+        ]
+    }
+}

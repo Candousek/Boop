@@ -4,7 +4,7 @@ async function createChannel(voice_state) {
     const { client } = voice_state;
     const channel = await client.guilds.cache.get(client.configs.id.guild_id).channels.create(`🔉・${voice_state.member.user.username.replace(/[\u{0080}-\u{10FFFF}]/gu,"")}'s channel`, {
         type: 'GUILD_VOICE',
-        parent: client.channels.cache.get(client.configs.id.auto_channel.category),
+        parent: (await client.modules.config.get("temp_channels.category")),
         permissionOverwrites: [
             {
                 id: voice_state.member.id,
@@ -18,7 +18,7 @@ async function createChannel(voice_state) {
 
 async function join(voice_state) {
     const { client } = voice_state;
-    if(!client.configs.id.auto_channel.create_channels.includes(voice_state.channelId)) return false;
+    if((await client.modules.config.get("temp_channels.create")) != (voice_state.channelId)) return false;
     const channel = await createChannel(voice_state, client);
     await client.modules.db.query(`INSERT INTO voice_channels (channel_id, user_id, owner_id) VALUES (?, ?, ?)`, [ channel.id, voice_state.member.id, voice_state.member.id, channel.name ]);
     await voice_state.member.voice.setChannel(channel);

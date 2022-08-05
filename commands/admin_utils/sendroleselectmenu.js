@@ -17,8 +17,8 @@ new Command({
             const row = new MessageActionRow().addComponents(
                 new MessageSelectMenu()
                     .setCustomId(`role-select-menu-${groupName}`)
-                    .setMinValues(0)
-                    .setMaxValues(groupConfig.roles.length)
+                    .setMinValues(groupConfig.type == "single" ? 1 : 0)
+                    .setMaxValues(groupConfig.type == "single" ? 1 : groupConfig.roles.length)
                     .setPlaceholder(`Click to select roles.`)
                     .addOptions(groupConfig.roles.map(r => { return { label: r.name, value: r.id, description: r.description, emoji: r.icon }}))
             );
@@ -28,20 +28,6 @@ new Command({
                 components: [ row ]
             });
         }
-
-        // const row = new MessageActionRow().addComponents(
-        //     new MessageSelectMenu()
-        //         .setCustomId("role-select-menu")
-        //         .setMinValues(1)
-        //         .setMaxValues(config.pings.roles.length)
-        //         .setPlaceholder(`Click to select roles.`)
-        //         .addOptions(config.pings.roles.map(r => { return { label: r.name, value: r.id, description: `Click to get role ${r.name}`, emoji: r.emoji }}))
-        // );
-
-        // await ctx.channel.send({
-        //     content: `Click to select what you want to be notified about.`,
-        //     components: [ row ]
-        // });
 
         await ctx.deleteReply();
 

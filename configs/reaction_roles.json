@@ -3,25 +3,57 @@
         "type": "multi",
         "name": "Ping roles",
         "icon": "🔔",
-        "description": "Select where you want to be pinged",
+        "description": "Select where you want to be pinged.",
         "roles": [
             {
-                "id": "980509728604049469",
-                "name": "5",
-                "icon": "📝",
-                "description": "Notifies you when there is a new update."
+                "id": "1001361767869448192",
+                "name": "Announcements",
+                "icon": "📣",
+                "description": "Notifies you of new server announcements."
             },
             {
-                "id": "980509753161707620",
-                "name": "15",
-                "icon": "😺",
-                "description": "Notifies you when we want to."
+                "id": "1001596912702590976",
+                "name": "Breaking News",
+                "icon": "🆕",
+                "description": "Notifies you about news in the IT world."
             },
             {
-                "id": "980509760094867506",
-                "name": "30",
-                "icon": "🤝",
-                "description": "Notifies you idk when."
+                "id": "1001596815579295774",
+                "name": "Giveaways",
+                "icon": "🎉",
+                "description": "Notifies you of new giveaways."
+            },
+            {
+                "id": "1001361786307612792",
+                "name": "Help with code ping",
+                "icon": "🔧",
+                "description": "If someone has a problem with the code, they will mention this role."
+            }
+        ]
+    },
+    "pronouns": {
+        "type": "single",
+        "name": "Pronouns",
+        "icon": "👥",
+        "description": "Select where you want to be pinged.",
+        "roles": [
+            {
+                "id": "1005101669933121559",
+                "name": "He/Him",
+                "icon": "<:hehim:1005119549315764244>",
+                "description": "Get role He/Him."
+            },
+            {
+                "id": "1005101688182554705",
+                "name": "She/Her",
+                "icon": "<:sheher:1005119550536290304>",
+                "description": "Get role She/Her."
+            },
+            {
+                "id": "1005101700614467726",
+                "name": "They/Them",
+                "icon": "<:theythem:1005119551748448266>",
+                "description": "Get role They/Them."
             }
         ]
     }

@@ -1,5 +1,4 @@
 const { Command, CommandType, ArgumentType } = require('gcommands');
-const fs = require('fs');
 
 new Command({
     name: 'config',

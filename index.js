@@ -21,6 +21,7 @@ const client = new GClient({
 	messagePrefix: '!',
 	devGuildId: process.env.DEV_SERVER,
 	intents: Object.keys(Intents.FLAGS),
+	partials: [ 'MESSAGE', 'CHANNEL', 'REACTION' ]
 });
 
 client.configs = require("./configs/exporter");

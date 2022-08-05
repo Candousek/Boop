@@ -1,4 +1,5 @@
 const { Listener } = require('gcommands');
+const { MessageEmbed } = require("discord.js");
 
 // Create a new listener listening to the "ready" event
 new Listener({
@@ -6,6 +7,14 @@ new Listener({
     event: 'guildBanRemove',
     run: (ban) => {
         const client = ban.client;
-        client.modules.base.log(client, `<a:nekoblush:933631882476806226> ${ban.user.tag} has been unbanned in this guild for \`${ban.reason||"No reason given"}\``)
+        if(ban.guild.id != client.configs.id.guild_id) return;
+        client.modules.base.log(client, {
+            embeds: [
+                new MessageEmbed()
+                    .setColor("#2f3136")
+                    .setAuthor({ name: `${ban.user.tag} has been unbanned`, iconURL: "https://candycz01.xyz/discord/audit/user_add.png" })
+                    .setDescription(`⮩ Reason: ${ban.reason||"None"}`)
+            ]
+        })
 	}
 });

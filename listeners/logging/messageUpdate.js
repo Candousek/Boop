@@ -9,6 +9,7 @@ new Listener({
         const client = new_message.client;
         if(new_message.guild.id != client.configs.id.guild_id) return;
         if(new_message.author?.bot) return;
+        if(new_message.content == old_message.content) return;
         client.modules.base.log(client, {
             embeds: [
                 new MessageEmbed()
